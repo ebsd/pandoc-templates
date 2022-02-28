@@ -486,7 +486,7 @@ $endif$
             \small{Page \thepage\ / \pageref{LastPage}\\
             Référence : $reference$}\tabularnewline
             \hline
-            \multicolumn{2}{|c|}{\textbf{$title$}} &
+            \multicolumn{2}{|c|}{\textbf{$title$: $subtitle$}} &
             \centering
             \small{N° de version :} \\
             $version$ &
@@ -531,7 +531,7 @@ $endif$
             \small{Page \thepage\ / \pageref{LastPage}\\
             Référence : $reference$}\tabularnewline
             \hline
-            \multicolumn{2}{|c|}{\textbf{$title$}} &
+            \multicolumn{2}{|c|}{\textbf{$title$ : $subtitle$}} &
             \centering
             \small{N° de version :} \\
             $version$ &
@@ -552,7 +552,7 @@ $endif$
             \hline
             \end{tabular}%
             \vskip 7cm
-            \Huge{PSSI \\ --- \\ $title$}
+            \Huge{$title$ \\ --- \\ $subtitle$}
   }
   \renewcommand{\headrulewidth}{0pt}% No header rule
 }
