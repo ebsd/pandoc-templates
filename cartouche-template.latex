@@ -480,7 +480,7 @@ $endif$
          $catproc$} &
             \raggedright
             \small{\textbf{Domaine \ Activité}\\
-        7. Système d'information \ 7.1 Informatique\\
+        7. Système d'information \\ 7.1 Informatique\\
         \textbf{Instance décisionnelle} : $instance$} &
             \centering
             \small{Page \thepage\ / \pageref{LastPage}\\
@@ -525,7 +525,7 @@ $endif$
         $catproc$} &
             \raggedright
             \small{\textbf{Domaine \ Activité}\\
-        7. Système d'information \ 7.1 Informatique\\
+        7. Système d'information \\ 7.1 Informatique\\
         \textbf{Instance décisionnelle} : $instance$} &
             \centering
             \small{Page \thepage\ / \pageref{LastPage}\\
