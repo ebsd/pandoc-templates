@@ -547,9 +547,9 @@ $endif$
 
 
 
-
+% désactivé le 03.03.2022 | LaTeX Error: Option clash for package lineno.
 % line numbers
-\usepackage[right]{lineno}
+%\usepackage[right]{lineno}
 
 % ligatures disabled
 \usepackage{microtype}

@@ -71,3 +71,28 @@ lastupdate: "xx.xx.2022"
 version: "1.0"
 ---
 ```
+
+# Modèle de lettre : lettre.latex
+Source: https://raw.githubusercontent.com/Pinkilla/pandoc-pitletter/master/template/lettre.tex
+
+## YaML header
+
+```
+---
+author: François Pignon
+from:
+ - Passerelle des champions du monde, 1
+ - 1000 Bruxelles
+ - \texttt{fpignon@example.org}
+to: 
+ - Éditions ACME
+ - Pierre Brochan
+ - Ruelle incroyable, 112
+ - 1000 Bien bien loin
+object: L'objet de ma lettre
+vref: Vos références
+mref: Mes références
+opening: Monsieur,
+closing: Salutem dicit   
+---
+```
