@@ -11,6 +11,11 @@
 \usepackage{datetime}
 \usepackage{eurosym}
 
+% modification pour pandoc
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+% /modification 
+
 \begin{document}
 \pagestyle{empty}
 
@@ -46,7 +51,7 @@ $if(mref)$
 \textit{Mes réf.: $mref$}
 $endif$
 $if(vref)$
-\\\textit{Vos réf.: $vref$}
+\textit{Vos réf.: $vref$}
 $endif$
 
 % 
