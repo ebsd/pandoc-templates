@@ -166,7 +166,7 @@ $if(linestretch)$
 \usepackage{setspace}
 $else$
 \usepackage{setspace}
-\setstretch{1.2}
+%\setstretch{1.2}
 $endif$
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -309,7 +309,7 @@ $else$
   hidelinks,
 $endif$
   breaklinks=true,
-  pdfcreator={LaTeX via pandoc with the Eisvogel template}}
+  pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allow verbatim text in footnotes
@@ -738,7 +738,7 @@ $endif$
 \item\relax\color{blockquote-text}\ignorespaces}{\unskip\unskip\endlist\end{customblockquote}}
 
 %
-% Source Sans Pro as the de­fault font fam­ily
+% Source Sans Pro as the default font family
 % Source Code Pro for monospace text
 %
 % 'default' option sets the default

@@ -93,6 +93,6 @@ object: L'objet de ma lettre
 vref: Vos références
 mref: Mes références
 opening: Monsieur,
-closing: Salutem dicit   
+closing: Salutem dicit
 ---
 ```
