@@ -54,7 +54,7 @@ keywords: []
 toc: true
 toc-title: "Table des matières"
 toc-own-page: true
-logo: /home/ebsd/Pictures/logo-hug-couleur.png
+logo: /home/ebsd/Pictures/logo.png
 logo-width: 250px
 code-block-font-size: \tiny
 header-includes:
