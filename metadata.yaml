@@ -1,0 +1,8 @@
+linkcolor: blue
+pandoc-latex-environment:
+  tcolorbox: [box]
+  bluebox: [bluebox]
+  greenbox: [greenbox]
+  yellowbox: [yellowbox]
+  orangebox: [orangebox]
+  redbox: [redbox]
