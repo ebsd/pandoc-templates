@@ -15,6 +15,12 @@ Convert .md to .pdf :
 pandoc note-template-pandoc-markdown.md -o note-template-pandoc-markdown.pdf --from markdown --template pandoc_custom_note --highlight-style breezedark
 ```
 
+## Use the makefile
+
+```
+make -f ~/.pandoc/templates/makefile mydoc.pdf
+```
+
 ## yaml header for markdown file
 
 Please read template file `pandoc_custom_note.latex`.

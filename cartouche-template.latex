@@ -19,6 +19,8 @@ $if(fontsize)$
 $endif$
 $if(papersize)$
   $papersize$paper,
+$else$
+  paper=a4,
 $endif$
 $if(beamer)$
   ignorenonframetext,
@@ -32,7 +34,7 @@ $endif$
 $for(classoption)$
   $classoption$$sep$,
 $endfor$
-]{$documentclass$}
+]{$if(beamer)$$documentclass$$else$$if(book)$scrbook$else$scrartcl$endif$$endif$}
 $if(beamer)$
 $if(background-image)$
 \usebackgroundtemplate{%
@@ -413,6 +415,16 @@ $if(csquotes)$
 \usepackage{csquotes}
 $endif$
 
+%
+% blockquote
+%
+\definecolor{blockquote-border}{RGB}{221,221,221}
+\definecolor{blockquote-text}{RGB}{119,119,119}
+\usepackage{mdframed}
+\newmdenv[rightline=false,bottomline=false,topline=false,linewidth=3pt,linecolor=blockquote-border,skipabove=\parskip]{customblockquote}
+\renewenvironment{quote}{\begin{customblockquote}\list{}{\rightmargin=0em\leftmargin=0em}%
+\item\relax\color{blockquote-text}\ignorespaces}{\unskip\unskip\endlist\end{customblockquote}}
+
 % CUSTOM SECTION DESACTIVEE
 %$if(title)$
 %\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
@@ -470,7 +482,7 @@ $endif$
 \fancyhf{}
   \fancyhead[CE,CO,LE,LO,RE,RO]{} %% clear out all headers
   \fancyhead[C]{%
-            \begin{tabular}{|m{3.5cm}|m{4.4cm}|m{5cm}|m{2.5cm}|}
+            \begin{tabular}{|m{4.3cm}|m{4.3cm}|m{4cm}|m{2.3cm}|}
             \hline
             \includegraphics[width=2.8cm]{$logo$} &
             \raggedright
@@ -559,7 +571,7 @@ $endif$
 
 % si on est sur la page 1, je veux un header spécifique (celui décrit juste avant)
 \ifnum\value{page}=1 \thispagestyle{headerPage1}%
-
+\fi
 
 %
 % /CUSTOM TEMPLATE
