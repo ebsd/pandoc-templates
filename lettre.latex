@@ -58,7 +58,7 @@ $endif$
 % Object
 %
 $if(object)$
-\par\bigskip\textbf{Concerne: $object$}
+\par\bigskip\textbf{Objet: $object$}
 $endif$
 
 %

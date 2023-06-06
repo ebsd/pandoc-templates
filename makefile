@@ -55,13 +55,13 @@
 		--metadata-file=/home/ebsd/.pandoc/templates/metadata.yaml \
                 --filter /usr/bin/pandoc-latex-environment
 
-	rm mermaid-filter.err
-
 	$(eval EXITCODE="$(shell git log > /dev/null 2>&1 ; echo $$?)")
 	@if [ "$(EXITCODE)" != "0" ]; then git init; fi
 
 	-git add $<
 	-git commit -m "$m"
+
+	rm mermaid-filter.err
 
 %.pdf:  %.let.md
 	pandoc $< -o $@ \
