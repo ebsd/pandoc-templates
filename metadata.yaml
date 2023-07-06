@@ -1,4 +1,4 @@
-geometry: "left=2.1cm,right=2.0cm,top=3cm,bottom=3cm"
+toc-title: "Table des matières"
 linkcolor: blue
 pandoc-latex-environment:
   tcolorbox: [box]

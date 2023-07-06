@@ -16,13 +16,13 @@
 
 # si git log rencontre une erreur, c'est que il n'y a pas de repo dans ce directory
 ## si le code de sortie de git log est différent de 0, alors on lance un git init
-	$(eval EXITCODE="$(shell git log > /dev/null 2>&1 ; echo $$?)")
-	@if [ "$(EXITCODE)" != "0" ]; then git init; fi
+	#$(eval EXITCODE="$(shell git log > /dev/null 2>&1 ; echo $$?)")
+	#@if [ "$(EXITCODE)" != "0" ]; then git init; fi
 
 	# avant de commit, prettity les markdowntables	
-	/usr/bin/markdown-table-formatter $<
-	-git add $<
-	-git commit -m "$m"
+	#/usr/bin/markdown-table-formatter $<
+	#-git add $<
+	#-git commit -m "$m"
 
 
 %.pdf:  %.man.md
@@ -37,11 +37,11 @@
 
 	rm mermaid-filter.err
 
-	$(eval EXITCODE="$(shell git log > /dev/null 2>&1 ; echo $$?)")
-	@if [ "$(EXITCODE)" != "0" ]; then git init; fi
+	#$(eval EXITCODE="$(shell git log > /dev/null 2>&1 ; echo $$?)")
+	#@if [ "$(EXITCODE)" != "0" ]; then git init; fi
 
-	-git add $<
-	-git commit -m "$m"
+	#-git add $<
+	#-git commit -m "$m"
 
 
 
@@ -55,11 +55,11 @@
 		--metadata-file=/home/ebsd/.pandoc/templates/metadata.yaml \
                 --filter /usr/bin/pandoc-latex-environment
 
-	$(eval EXITCODE="$(shell git log > /dev/null 2>&1 ; echo $$?)")
-	@if [ "$(EXITCODE)" != "0" ]; then git init; fi
+	#$(eval EXITCODE="$(shell git log > /dev/null 2>&1 ; echo $$?)")
+	#@if [ "$(EXITCODE)" != "0" ]; then git init; fi
 
-	-git add $<
-	-git commit -m "$m"
+	#-git add $<
+	#-git commit -m "$m"
 
 	rm mermaid-filter.err
 
