@@ -30,8 +30,11 @@ Or check `note-template-pandoc-markdown.md`.
 
 # Eisvogel template
 
-Is coming from https://github.com/Wandmalfarbe/pandoc-latex-template.
+Is coming from https://github.com/Wandmalfarbe/pandoc-latex-template. Download it :
 
+```
+wget https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex -O ~/.pandoc/templates/eisvogel.latex
+```
 Convert .md to .pdf :
 
 ```
