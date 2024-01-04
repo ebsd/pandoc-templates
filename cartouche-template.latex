@@ -255,6 +255,8 @@ $if(beamer)$
 $else$
 \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $endif$
+%$else$
+%\usepackage[margin=2.5cm,includehead=true,includefoot=true,centering,$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
 $endif$
 $if(beamer)$
 \newif\ifbibliography
