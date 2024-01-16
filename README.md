@@ -13,7 +13,7 @@ git clone https://github.com/ebsd/pandoc-templates.git templates
 Convert .md to .pdf :
 
 ```
-pandoc note-template-pandoc-markdown.md -o note-template-pandoc-markdown.pdf --from markdown --template pandoc_custom_note --highlight-style breezedark
+pandoc file.md -o file.pdf --from markdown --template pandoc_custom_note --highlight-style breezedark
 ```
 
 ## Use the makefile
@@ -38,7 +38,7 @@ wget https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master
 Convert .md to .pdf :
 
 ```
-pandoc doc-template-pandoc-markdown.md -o doc-template-pandoc-markdown.pdf --from markdown --template eisvogel --toc --number-sections --highlight-style breezedark
+pandoc file.md -o file.pdf --from markdown --template eisvogel --toc --number-sections --highlight-style breezedark
 ```
 
 ## yaml header for markdown file
@@ -103,6 +103,6 @@ object: L'objet de ma lettre
 vref: Vos références
 mref: Mes références
 opening: Monsieur,
-closing: Salutem dicit
+closing: Salutations,
 ---
 ```
