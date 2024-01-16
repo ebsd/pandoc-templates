@@ -1,72 +1,43 @@
-# Usage : make myfile-to-convert-to-pdf.pdf m="git commit message here"
+# Usage : make myfile-to-convert-to-pdf.pdf
 # - devant une commande pour ignorer les erreurs et poursuivre
 
 %.pdf:  %.note.md
 	pandoc $< -o $@ \
 		--from markdown \
-		--template=/home/ebsd/.pandoc/templates/pandoc_custom_note.latex \
+		--template=${HOME}/.pandoc/templates/pandoc_custom_note.latex \
 		--highlight-style breezedark \
 		-f markdown-implicit_figures \
-		-H ~/.pandoc/templates/head.tex \
-		--metadata-file=/home/ebsd/.pandoc/templates/metadata.yaml \
-		--filter /usr/bin/pandoc-latex-environment \
-		--filter /usr/lib/node_modules/mermaid-filter/index.js
+		-H ${HOME}/.pandoc/templates/head.tex \
+		--metadata-file=${HOME}/.pandoc/templates/metadata.yaml \
+		--filter ${HOME}/.local/bin/pandoc-latex-environment \
+		#--filter /usr/lib/node_modules/mermaid-filter/index.js
 
-	rm mermaid-filter.err
-
-# si git log rencontre une erreur, c'est que il n'y a pas de repo dans ce directory
-## si le code de sortie de git log est différent de 0, alors on lance un git init
-	#$(eval EXITCODE="$(shell git log > /dev/null 2>&1 ; echo $$?)")
-	#@if [ "$(EXITCODE)" != "0" ]; then git init; fi
-
-	# avant de commit, prettity les markdowntables	
-	#/usr/bin/markdown-table-formatter $<
-	#-git add $<
-	#-git commit -m "$m"
-
+	#rm mermaid-filter.err
 
 %.pdf:  %.man.md
 	pandoc $< -o $@ \
 		--from markdown \
-		--template=/home/ebsd/.pandoc/templates/eisvogel.latex \
+		--template=${HOME}/.pandoc/templates/eisvogel.latex \
 		--toc --number-sections --highlight-style breezedark \
-		-H ~/.pandoc/templates/head.tex \
+		-H ${HOME}/.pandoc/templates/head.tex \
 		--metadata-file=/home/ebsd/.pandoc/templates/metadata.yaml \
-		--filter /usr/bin/pandoc-latex-environment \
-		--filter /usr/lib/node_modules/mermaid-filter/index.js
+		--filter ${HOME}/.local/bin/pandoc-latex-environment \
+		#--filter /usr/lib/node_modules/mermaid-filter/index.js
 
-	rm mermaid-filter.err
-
-	#$(eval EXITCODE="$(shell git log > /dev/null 2>&1 ; echo $$?)")
-	#@if [ "$(EXITCODE)" != "0" ]; then git init; fi
-
-	#-git add $<
-	#-git commit -m "$m"
-
+	#rm mermaid-filter.err
 
 
 %.pdf:  %.std.md
 	pandoc $< -o $@ \
 		--from markdown \
-		--template=/home/ebsd/.pandoc/templates/cartouche-template.latex \
+		--template=${HOME}/.pandoc/templates/cartouche-template.latex \
 		--number-sections --highlight-style breezedark \
 		-f markdown-implicit_figures \
-		-H ~/.pandoc/templates/head.tex \
-		--metadata-file=/home/ebsd/.pandoc/templates/metadata.yaml \
-                --filter /usr/bin/pandoc-latex-environment
-
-	#$(eval EXITCODE="$(shell git log > /dev/null 2>&1 ; echo $$?)")
-	#@if [ "$(EXITCODE)" != "0" ]; then git init; fi
-
-	#-git add $<
-	#-git commit -m "$m"
-
-	rm mermaid-filter.err
+		-H ${HOME}/.pandoc/templates/head.tex \
+		--metadata-file=${HOME}/.pandoc/templates/metadata.yaml \
+                --filter ${HOME}/.local/bin/pandoc-latex-environment
 
 %.pdf:  %.let.md
 	pandoc $< -o $@ \
 		--from markdown \
-		--template=/home/ebsd/.pandoc/templates/lettre.latex 
-
-
-
+		--template=${HOME}/.pandoc/templates/lettre.latex 
