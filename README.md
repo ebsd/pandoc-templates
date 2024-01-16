@@ -3,9 +3,9 @@
 Clone this repo into `~/.pandoc/templates`.
 
 ```
-mkdir ~/.pandoc
-cd ~/.pandoc
-git clone https://github.com/ebsd/templates.git templates
+mkdir $HOME/.pandoc
+cd $HOME/.pandoc
+git clone https://github.com/ebsd/pandoc-templates.git templates
 ```
 
 # Custom notes template
