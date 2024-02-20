@@ -22,9 +22,10 @@
 		-H ${HOME}/.pandoc/templates/head.tex \
 		--metadata-file=/home/ebsd/.pandoc/templates/metadata.yaml \
 		--filter ${HOME}/.local/bin/pandoc-latex-environment \
+		--filter /usr/local/lib/nodejs/node-v21.5.0-linux-x64/lib/node_modules/mermaid-filter/index.js
 		#--filter /usr/lib/node_modules/mermaid-filter/index.js
 
-	#rm mermaid-filter.err
+	rm mermaid-filter.err
 
 
 %.pdf:  %.std.md
