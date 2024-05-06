@@ -106,3 +106,41 @@ opening: Monsieur,
 closing: Salutations,
 ---
 ```
+
+# tcolorbox
+
+Les `tcolorbox` sont gérés ainsi.
+
+Contenu markdown :
+```
+::: {.titledbox title="Ceci est mon titre pour cette box"}
+
+Et voici le contenu de cette box.
+
+:::
+```
+
+Fichier .pandoc/template/head.tex
+```
+% quelques colorboxes
+\definecolor{light-blue}{RGB}{18, 194, 242}
+\newtcolorbox{titledbox}[1]{colback=white, colframe=light-blue, title=#1}
+```
+
+Le paramètre `[1]` permet de définir qu'un argument sera passé à la commande. Et `title=#1` reçoit cet argument.
+
+Fichier .pandoc/template/metadata.yaml (j'utilise pandoc-latex-environment) :
+```
+pandoc-latex-environment:
+  titledbox: [titledbox]
+```
+
+Ce qui va générer un fichier latex :
+```
+\begin{titledbox}{Ceci est mon titre pour cette box}
+
+Et voici le contenu de cette box.
+
+\end{titledbox}
+
+```

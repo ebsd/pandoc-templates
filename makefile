@@ -27,6 +27,14 @@
 
 	rm mermaid-filter.err
 
+%.tex:  %.man.md
+	pandoc $< -o $@ \
+		--from markdown \
+		--template=${HOME}/.pandoc/templates/eisvogel.latex \
+		--toc --number-sections --highlight-style breezedark \
+		-H ${HOME}/.pandoc/templates/head.tex \
+		--metadata-file=/home/ebsd/.pandoc/templates/metadata.yaml \
+		--filter ${HOME}/.local/bin/pandoc-latex-environment
 
 %.pdf:  %.std.md
 	pandoc $< -o $@ \
